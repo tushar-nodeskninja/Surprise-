@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Rakshabandhan</title>
+  <style>
+    /* Hide the surprise initially */
+    #surprise {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: darkmagenta;
+    }
+
+    img.gift:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Happy Rakshabandhan, Didi! 🌸</h1>
+
+  <p>You are the best sister anyone could ask for. This site is a small surprise for you.</p>
+
+  <h2>🎁 Click the Gift Below 🎁</h2>
+
+  <!-- CLICKABLE GIFT IMAGE -->
+  <img 
+    src="https://cdn.pixabay.com/photo/2013/07/13/12/19/chocolate-159631_1280.png" 
+    alt="Gift Box" 
+    width="200" 
+    class="gift" 
+    onclick="showSurprise()"
+  >
+
+  <!-- HIDDEN SURPRISE -->
+  <div id="surprise">
+    <h3>🎉 Surprise Message 🎉</h3>
+    <p>I’ve collected some of our best memories and made something just for you…</p>
+    <img 
+      src="https://cdn.pixabay.com/photo/2016/03/24/15/53/chocolate-1277002_1280.jpg" 
+      width="300" 
+      alt="Memory Photo"
+    >
+    <p>Love you always ❤️</p>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function showSurprise() {
+      const surprise = document.getElementById("surprise");
+      surprise.style.display = "block";
+    }
+  </script>
+</body>
+</html>
