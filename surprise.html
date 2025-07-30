@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click to Reveal Surprise</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    #giftImage {
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #giftImage:hover {
+      transform: scale(1.05);
+    }
+
+    #surpriseImage {
+      width: 300px;
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: opacity 1s ease, transform 1s ease;
+      display: none;
+    }
+
+    #surpriseImage.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <h1>🌸 Happy Rakshabandhan, Didi! 🌸</h1>
+  <p>You are the best sister anyone could ever ask for.  
+  On this special day, I just want to say — thank you for always being there for me.</p>
+  <p>This website is my small gift to make you smile today!</p>
+  <img src="https://cdn.pixabay.com/photo/2018/08/26/07/58/graphic-3631650_1280.png" alt="Rakhi Image" width="300">
+
+  <h1>🎁 Click on the Box to Reveal Your Surprise!</h1>
+  <img id="giftImage" src="https://cdn.pixabay.com/photo/2013/07/13/12/19/chocolate-159631_1280.png" alt="Gift">
+
+  <img id="surpriseImage" src="https://cdn.pixabay.com/photo/2016/03/24/15/53/chocolate-1277002_1280.jpg" alt="Surprise Chocolate">
+
+  <script>
+    const gift = document.getElementById('giftImage');
+    const surprise = document.getElementById('surpriseImage');
+
+    gift.addEventListener('click', () => {
+      surprise.classList.add('show');
+    });
+  </script>
+
+</body>
+</html>
